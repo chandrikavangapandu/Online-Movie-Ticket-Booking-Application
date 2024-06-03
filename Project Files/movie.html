@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MOVIE</title>
+    <!-- <link rel="stylesheet" href="movie.css" /> -->
+    <style>
+        .head{
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 10px;
+    width: 545px;
+    /* border: 2px solid black; */
+    color: #08438E;
+    background-color: #CEE2FA;
+    font-size: 15px;
+    padding: 15px;
+    }
+.movie{
+    width:500px;
+    height:500PX;
+    border: 2px solid black;
+    font-size: 20px;
+    color: black;
+    margin: auto;
+    padding: auto;
+}
+.poster{
+    width:500px;
+    height:300PX;
+    border: 2px solid white;
+    font-size: 20px;
+    background-color: white;
+    color: black;
+    margin: auto;
+    padding: auto;
+}
+.image{
+    width: 500px;
+    height: 300px;
+}
+    </style>
+
+    <script>
+        function disp_post(){
+            var Name=document.getElementById("Name");
+            var imgUrl=" "; 
+            if(Name.value =="RRR"){
+            imgUrl="https://images.news18.com/ibnlive/uploads/2021/01/1611564850_rrr-poster.jpg";}
+            else if(Name.value =="ORANGE"){
+            imgUrl="http://3.bp.blogspot.com/_3Jqz38li2xc/TMcATKCe76I/AAAAAAAAAUw/5Q1iuIS1cUc/s1600/orange+movie+posters+07.jpg";}
+            else if(Name.value =="ROBO"){
+            imgUrl="https://4.bp.blogspot.com/-cUf9IBhWFPs/W5N81kliA8I/AAAAAAABacU/3ZjvH7Owzms-06KjIcMRluWlt6WK9gVngCLcBGAs/s1600/robo_2_point_0_new_posters%2B%25282%2529.jpg";}
+            else if(Name.value =="KGF"){
+            imgUrl="https://th.bing.com/th/id/OIP.oLwP2gBnaHyokSu8rm7V9QHaJ9?pid=ImgDet&rs=1";}
+            else if(Name.value=="BAAHUBALI"){
+            imgUrl="https://www.filmibeat.com/ph-big/2017/05/baahubali-2-the-conclusion_149577721640.jpg";  }
+            else if(Name.value=="96"){
+            imgUrl="https://th.bing.com/th/id/OIP.lRHOIEfHesv_S8plb3zbOgHaE7?pid=ImgDet&rs=1";
+            }
+            document.getElementById("img").src=imgUrl;
+        }
+        </script>
+</head>
+<body>
+    <center>
+    <div class="head"><b>MOVIE TICKETS BOOKING</b></div>
+    <fieldset class="movie">
+        <fieldset class="poster">
+            <img id="img" src="https://img.freepik.com/premium-psd/movie-title-realistic-text-effect_541453-85.jpg?size=626&ext=jpg" alt="Poster" class="image">
+        </fieldset>
+        <form action="/login" method="post">
+        <table>
+        <tr>
+        <td><label for="Name">Movie Name</label></td>
+        <td><select id="Name" onclick="disp_post()" name="Name">
+            <option value="RRR">RRR</option>
+            <option value="ORANGE">ORANGE</option>
+            <option value="ROBO">ROBO</option>
+            <option value="KGF">KGF</option>
+            <option value="BAAHUBALI">BAAHUBALI</option>
+            <option value="96">96</option>
+        </select></td></tr>
+        <tr>
+        <td><label for="Time">Time</label></td>
+        <td><input type="radio" value="11AM" name="Time">11AM
+        <input type="radio" value="2:30PM" name="Time">2:30PM
+        <input type="radio" value="6:30PM" name="Time">6:30PM
+        <input type="radio" value="9:45PM" name="Time">9:45PM
+        </td></tr>
+        <tr>
+        <td><label for="Cost">Cost</label></td>
+        <td><input type="radio" value="200" name="Cost">200
+        <input type="radio" value="150" name="Cost">150
+        <input type="radio" value="100" name="Cost">100
+        </td>
+        </tr>
+        <tr>
+        <td><label for="Ticket">No of tickets</label></td> 
+        <td><input list="Ticket" name="Ticket" placeholder="select tickets">
+        <datalist id="Ticket"><option>1</option><option>2</option>
+        <option>3</option><option>4</option><option>5</option><option>6</option></datalist></td></tr>
+        <tr>
+            <td><label for="theater">theater</label></td>
+            <td><input type="radio" value="shayamala" name="theater">shayamala
+            <input type="radio" value="raja" name="theater">raja
+            <input type="radio" value="ashokaya" name="theater">ashokaya</td>
+        </tr>
+        <tr><td colspan="2"><center><button>BOOKTICKET</button></center></td>
+        </tr>
+        <!-- <td><input type="text" name="Ticket" placeholder="tickets"></td> -->
+    </table>
+    </form>
+    </fieldset>
+</center>
+</body>
+</html>
+
